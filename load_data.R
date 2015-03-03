@@ -1,14 +1,15 @@
-## This file is for loading the large dataset.
-setwd("C:/masked/DataScience/ExpDataAnalysis/ProgrammingAssignment2-master")
+## Load dataset.
+# Reference courtesy Xiaodan@github
+setwd("C:/Sreekanth/DataScience/ExpDataAnalysis/ExData_Plotting1/ExData_Plotting1")
 filename <- "./household_power_consumption.txt"
 data <- read.table(filename,
 header = TRUE,
 sep = ";",
 colClasses = c("character", "character", rep("numeric",7)),
 na = "?")
-dim(data) # 2075259 9
+dim(data) # check properties
 attach(data)
-## We only need data of 2 days.
+## Data for 2 days.
 subset <- Date == "1/2/2007" | Date == "2/2/2007"
 newData <- data[subset, ]
 attach(newData)
