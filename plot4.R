@@ -24,7 +24,7 @@ xlab = "", ylab = "Energy sub metering")
 lines(DateTime, Sub_metering_2, col = "red")
 lines(DateTime, Sub_metering_3, col = "blue")
 # Remove the border of legend here.
-legend("toprigaht",
+legend("topright",
 bty = "n",
 col = c("black", "red", "blue"),
 c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
